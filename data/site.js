@@ -8,7 +8,7 @@ window.LAB.site = {
   "institution": "Indian Institute of Technology Delhi",
   "shortInstitution": "IIT Delhi",
   "email": "gazalahabib@civil.iitd.ac.in",
-  "portrait": "",
+  "portrait": "assets/images/gazala_habib_homepage.jpg",
   "portraitCredit": "",
   "portraitCreditUrl": "",
   "introduction": "Understanding air pollution, from its sources to its effects on human health.",
