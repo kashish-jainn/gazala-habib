@@ -61,5 +61,5 @@ window.LAB.site = {
   "labName": "Aerosol Research and Characterisation Laboratory",
   "labIntroduction": "Led by Professor Gazala Habib at IIT Delhi, ARCID studies air pollution through field measurements, emission inventories, aerosol chemistry and assessments of human exposure and health.",
   "labLogo": "assets/images/ARCID logo.jpg",
-  "institutionLogo": "assets/images/IITD_logo.jpg"
+  "institutionLogo": "assets/images/IITD_logo.png"
 };
