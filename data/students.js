@@ -1,4 +1,4 @@
-// EDIT THIS FILE: status must be "current" or "alumni"; dates may be written as "July 2025". Leave unknown fields empty.
+// EDIT THIS FILE: status must be "current" or "alumni"; joined and graduated use "Jul-2025" (MMM-YYYY). Leave unknown fields empty.
 // Keep quotation marks and commas. Image paths are relative to the website root.
 window.LAB = window.LAB || {};
 window.LAB.students = [

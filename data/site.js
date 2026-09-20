@@ -1,5 +1,5 @@
-// EDIT THIS FILE: professor biography, contact details, portrait and homepage slideshow.
-// Keep quotation marks and commas. Image paths are relative to the website root.
+// EDIT THIS FILE: ARCID name, header logos, professor portrait, biography and homepage slideshow.
+// Upload photos to assets/images/; then enter their exact paths below. Empty image fields show text placeholders.
 window.LAB = window.LAB || {};
 window.LAB.site = {
   "name": "Gazala Habib",
@@ -8,9 +8,9 @@ window.LAB.site = {
   "institution": "Indian Institute of Technology Delhi",
   "shortInstitution": "IIT Delhi",
   "email": "gazalahabib@civil.iitd.ac.in",
-  "portrait": "assets/images/professor.jpg",
-  "portraitCredit": "Shikha Sharma / Rukhmabai Initiatives",
-  "portraitCreditUrl": "https://rukhmabai.com/innovative-equipment-approaches-put-dr-gazala-habibs-air-pollution-research-into-top-gear/",
+  "portrait": "",
+  "portraitCredit": "",
+  "portraitCreditUrl": "",
   "introduction": "Understanding air pollution, from its sources to its effects on human health.",
   "biography": [
     "Professor Gazala Habib studies atmospheric aerosols, air pollution monitoring and the health and climate implications of particulate matter. Her work connects measurements at emission sources with the chemical and physical properties of particles in the atmosphere and the exposures people experience.",
@@ -56,5 +56,10 @@ window.LAB.site = {
   "slideshowInterval": 6500,
   "researchNote": "Themes are synthesized from the group’s supplied research description and Professor Habib’s publication record. Each area links to a representative publication.",
   "projectNote": "Project details are transcribed from the supplied CV. The Muzaffarpur project was listed as ongoing, with an April 2026 end date; its current status needs confirmation.",
-  "publicationSnapshot": "19 September 2026"
+  "publicationSnapshot": "19 September 2026",
+  "labShortName": "ARCID",
+  "labName": "Aerosol Research and Characterisation Laboratory",
+  "labIntroduction": "Led by Professor Gazala Habib at IIT Delhi, ARCID studies air pollution through field measurements, emission inventories, aerosol chemistry and assessments of human exposure and health.",
+  "labLogo": "",
+  "institutionLogo": ""
 };

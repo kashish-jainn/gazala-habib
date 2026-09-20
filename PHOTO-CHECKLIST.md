@@ -2,9 +2,16 @@
 
 Upload images into `assets/images/`, then enter their relative paths in the listed data file. Empty fields are safe and show labelled placeholders or text.
 
+For step-by-step GitHub upload instructions, see **HOW-TO-EDIT.md**.
+
+## Shared header logos
+
+- `data/site.js` → `labLogo`: ARCID logo on the left, on every page.
+- `data/site.js` → `institutionLogo`: IIT Delhi logo on the right, on every page.
+
 ## Homepage and professor
 
-- `data/site.js` → `portrait`: professor portrait (a credited existing portrait is included).
+- `data/site.js` → `portrait`: professor portrait (upload your replacement photograph; the previous portrait is no longer displayed).
 - `data/site.js` → `homePhotos`: three new homepage photo slots. Add or remove entries as required.
 
 ## Research themes

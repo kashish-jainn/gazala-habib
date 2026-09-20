@@ -1,4 +1,4 @@
-# Professor Gazala Habib website
+# ARCID laboratory website
 
 A complete, editable static website for GitHub Pages. It uses HTML, CSS and JavaScript, with no package installation, database, server or build command. Open `index.html` in a browser to preview it locally. All eight HTML pages include their content, so they remain readable without JavaScript. JavaScript loads subsequent data edits and enables the photo controls.
 
@@ -19,12 +19,16 @@ Yes. Each tab links to its own HTML page. All pages share the same stylesheet an
 | Partnerships | `partnerships.html` | `data/partners.js` |
 | Opportunities | `opportunities.html` | `data/opportunities.js` |
 
+Detailed upload and date instructions: **HOW-TO-EDIT.md**.
+
+The shared ARCID header and IIT Delhi logo positions are generated from `data/site.js` by `assets/js/app.js` on all eight pages.
+
 Shared appearance: `assets/css/styles.css`.
 Shared page rendering and slideshow controls: `assets/js/app.js`.
 Photos and logos: `assets/images/`.
 Site icon: `assets/favicon.svg`.
 
-Page titles, descriptions, navigation labels and the basic header/footer are in the HTML files. The main biography and page content come from the data files. If the professor's title, institutional branding or email changes, update the shared header/footer text in all eight HTML files as well as the relevant data.
+Page titles and descriptions are in the HTML files. Navigation and the shared header/footer are rendered by `assets/js/app.js`; lab identity, logo paths and contact information are in `data/site.js`. Run `node scripts/build-static.cjs` after final edits to refresh the HTML copies of the content and shared header/footer.
 
 ## 2. Publish on GitHub Pages without the command line
 
@@ -86,7 +90,7 @@ For example, a student entry in `data/students.js` is:
 }
 ```
 
-Fill empty strings with verified information. Use `"current"` for present students and `"alumni"` for past students. On graduation, change the status to `"alumni"`, fill `graduated`, and update the current affiliation. For present students, the site displays an expected graduation date only if you explicitly provide one; otherwise it displays the joining date or “Current PhD researcher”.
+Fill empty strings with verified information. Use `"current"` for present students and `"alumni"` for past students. On graduation, change the status to `"alumni"`, fill `graduated`, and update the current affiliation. Present students always display “Joined:” using `joined`; alumni display “Graduated:” using `graduated`. Enter month and year as `Jul-2025`. Blank dates display “To be added”. The legacy `expectedGraduation` field is no longer displayed.
 
 Keep these objects inside the existing array. Separate adjacent objects with a comma. Text containing double quotation marks must escape them as `\"`. Normal apostrophes do not need escaping inside double-quoted text.
 
@@ -106,11 +110,11 @@ Recommended sizes: homepage photos around 1600 × 700 pixels, student portraits 
 
 ### Homepage
 
-Edit `homePhotos` in `data/site.js`. Set each `image` field, caption, descriptive `alt` text and optional credit. Empty homepage image fields are skipped. If all are empty, the homepage starts with the professor’s portrait and biography; no empty banner is displayed. Two or more supplied photographs activate the slideshow. A single photo is displayed without unnecessary controls.
+Edit `homePhotos` in `data/site.js`. Set each `image` field, caption, descriptive `alt` text and optional credit. Empty homepage image fields are skipped. If all are empty, the homepage starts with the ARCID introduction, followed by the professor’s portrait and biography; no empty banner is displayed. Two or more supplied photographs activate the slideshow. A single photo is displayed without unnecessary controls.
 
 The `position` value controls cropping, for example `"50% 25%"` keeps more of the upper part of an image visible. `slideshowInterval` is measured in milliseconds; the default is 6500.
 
-The supplied professor portrait is the existing credited portrait. To replace it, upload your selected portrait and change `portrait`, `portraitCredit` and `portraitCreditUrl` in `data/site.js`.
+The previous third-party professor portrait is no longer displayed, and its homepage credit is removed. Upload your own portrait and set `portrait` in `data/site.js`. Leave `portraitCredit` and `portraitCreditUrl` empty unless your replacement photograph requires a credit. Set `labLogo` and `institutionLogo` in the same file for the shared header logos.
 
 ### Research
 
@@ -163,4 +167,4 @@ Transfer instructions: https://docs.github.com/en/repositories/creating-and-mana
 
 There is no website administrator login, editable online database or external hosting service. GitHub account permissions control who can modify the source files. Photos and data are shipped as static files. No credentials, private CV information, database dumps or hosting-account secrets are included.
 
-Content provenance and the current photo credit are recorded in `SOURCES.md`. Replace image placeholders and review missing dates and affiliations before considering the content complete.
+Content provenance and the archived photo credit are recorded in `SOURCES.md`. Replace image placeholders and review missing dates and affiliations before considering the content complete.

@@ -15,9 +15,11 @@ for (const page of pages) {
   const file = path.join(base, page + '.html');
   let html = fs.readFileSync(file, 'utf8');
   const target = {innerHTML:''};
+  const headerTarget = {innerHTML:''};
+  const footerTarget = {innerHTML:''};
   const context = {
     window: {LAB:{},matchMedia:()=>({matches:true})},
-    document: {body:{dataset:{page}},getElementById:()=>target,querySelectorAll:()=>[]},
+    document: {body:{dataset:{page}},getElementById:id=>({'page-content':target,'site-header':headerTarget,'site-footer':footerTarget}[id]||null),querySelectorAll:()=>[]},
     console, setInterval, clearInterval,
   };
   vm.createContext(context);
@@ -34,6 +36,8 @@ for (const page of pages) {
     html = html.replace('<div id="page-content"></div>',block);
   }
   html = html.replace(/<noscript>[\s\S]*?<\/noscript>/g,'');
+  html = html.replace(/<header\b[^>]*>[\s\S]*?<\/header>/,`<header id="site-header" class="site-header">${headerTarget.innerHTML}</header>`);
+  html = html.replace(/<footer\b[^>]*>[\s\S]*?<\/footer>/,`<footer id="site-footer" class="site-footer">${footerTarget.innerHTML}</footer>`);
   fs.writeFileSync(file,html);
   console.log(`Updated ${page}.html`);
 }
