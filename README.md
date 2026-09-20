@@ -1,6 +1,6 @@
 # Professor Gazala Habib website
 
-A complete, editable static website for GitHub Pages. It uses HTML, CSS and JavaScript, with no package installation, database, server or build command. Open `index.html` in a browser to preview it locally. JavaScript must be enabled because the page content is read from the included data files.
+A complete, editable static website for GitHub Pages. It uses HTML, CSS and JavaScript, with no package installation, database, server or build command. Open `index.html` in a browser to preview it locally. All eight HTML pages include their content, so they remain readable without JavaScript. JavaScript loads subsequent data edits and enables the photo controls.
 
 The package includes eight pages, six research themes, 16 students, nine projects and 84 publication records. Photographs and institutional logos that have not been supplied have empty image fields; the site displays labelled placeholders or the institution's text abbreviation. No missing image is represented as an authentic instrument, student or institution logo.
 
@@ -52,6 +52,10 @@ For a shorter address, a repository named exactly `YOUR-USERNAME.github.io` can 
 Official instructions: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 Quickstart: https://docs.github.com/en/pages/quickstart
 
+## Complete-upload check
+
+The repository root must contain both `assets/` and `data/`, alongside the eight HTML pages. Uploading only the HTML files leaves out the design, photographs and editable data. Drag both folders into GitHub’s upload area with their contents; do not flatten their files into the root.
+
 ## 3. Update information later
 
 1. Sign into GitHub and open the repository.
@@ -62,6 +66,10 @@ Quickstart: https://docs.github.com/en/pages/quickstart
 6. GitHub Pages republishes the changed files automatically.
 
 You can also edit the files on your computer, preview `index.html`, then upload the updated files into the same paths. You do not need to learn React or use a terminal for routine changes.
+
+### Refresh the fallback HTML after content edits
+
+Normal browser visitors see changes to `data/*.js` immediately after Pages republishes. Each HTML page also contains a snapshot for visitors without JavaScript and for resilience if a data file fails to load. After updating data, refresh those snapshots locally with `node scripts/build-static.cjs`, then commit the updated HTML files too. Node.js is only needed for this optional snapshot refresh; hosting needs no build step or dependencies. Avoid editing the generated content between `CONTENT START` and `CONTENT END` directly; keep routine content edits in the data files.
 
 For example, a student entry in `data/students.js` is:
 
@@ -98,7 +106,7 @@ Recommended sizes: homepage photos around 1600 × 700 pixels, student portraits 
 
 ### Homepage
 
-Edit `homePhotos` in `data/site.js`. Set each `image` field, caption, descriptive `alt` text and optional credit. Empty homepage image fields are skipped. If all are empty, one labelled placeholder appears. Two or more supplied photographs activate the slideshow. A single photo is displayed without unnecessary controls.
+Edit `homePhotos` in `data/site.js`. Set each `image` field, caption, descriptive `alt` text and optional credit. Empty homepage image fields are skipped. If all are empty, the homepage starts with the professor’s portrait and biography; no empty banner is displayed. Two or more supplied photographs activate the slideshow. A single photo is displayed without unnecessary controls.
 
 The `position` value controls cropping, for example `"50% 25%"` keeps more of the upper part of an image visible. `slideshowInterval` is measured in milliseconds; the default is 6500.
 
