@@ -1,4 +1,5 @@
 // EDIT THIS FILE: status must be "current" or "alumni"; joined and graduated use "Jul-2025" (MMM-YYYY). Leave unknown fields empty.
+// coSupervisor: enter the name(s) and optional institution, or "None" if not applicable.
 // Keep quotation marks and commas. Image paths are relative to the website root.
 window.LAB = window.LAB || {};
 window.LAB.students = [
@@ -10,6 +11,7 @@ window.LAB.students = [
     "graduated": "",
     "expectedGraduation": "",
     "thesis": "Role of aerosol chemical composition in hygroscopic behaviour and optical properties during winter in Delhi",
+    "coSupervisor": "",
     "affiliation": ""
   },
   {
@@ -20,6 +22,7 @@ window.LAB.students = [
     "graduated": "",
     "expectedGraduation": "",
     "thesis": "Emission characterization and inventory development of aerosol and its precursors from on-road transport sector",
+    "coSupervisor": "",
     "affiliation": ""
   },
   {
@@ -30,6 +33,7 @@ window.LAB.students = [
     "graduated": "",
     "expectedGraduation": "",
     "thesis": "Investigating the contribution of organics in refining source apportionment",
+    "coSupervisor": "",
     "affiliation": ""
   },
   {
@@ -40,6 +44,7 @@ window.LAB.students = [
     "graduated": "",
     "expectedGraduation": "",
     "thesis": "",
+    "coSupervisor": "",
     "affiliation": ""
   },
   {
@@ -50,6 +55,7 @@ window.LAB.students = [
     "graduated": "",
     "expectedGraduation": "",
     "thesis": "",
+    "coSupervisor": "",
     "affiliation": ""
   },
   {
@@ -60,6 +66,7 @@ window.LAB.students = [
     "graduated": "",
     "expectedGraduation": "",
     "thesis": "",
+    "coSupervisor": "",
     "affiliation": ""
   },
   {
@@ -70,6 +77,7 @@ window.LAB.students = [
     "graduated": "",
     "expectedGraduation": "",
     "thesis": "",
+    "coSupervisor": "",
     "affiliation": ""
   },
   {
@@ -80,6 +88,7 @@ window.LAB.students = [
     "graduated": "Jun-2017",
     "expectedGraduation": "",
     "thesis": "Emissions of aerosol and gases from on-road light duty vehicles",
+    "coSupervisor": "",
     "affiliation": "Assistant Professor, Central University of Rajasthan"
   },
   {
@@ -90,6 +99,7 @@ window.LAB.students = [
     "graduated": "Oct-2018",
     "expectedGraduation": "",
     "thesis": "Role of aerosols on cardiopulmonary functions of economically different groups of megacity Delhi and a town Hamirpur Himachal Pradesh",
+    "coSupervisor": "",
     "affiliation": "Assistant Engineer, Directorate of Local Bodies, Govt. of Rajasthan"
   },
   {
@@ -100,6 +110,7 @@ window.LAB.students = [
     "graduated": "Sep-2020",
     "expectedGraduation": "",
     "thesis": "Effects of fine aerosol and its toxic components on human lung- An integrative approach",
+    "coSupervisor": "",
     "affiliation": "Assistant Vice President, Barclays"
   },
   {
@@ -110,6 +121,7 @@ window.LAB.students = [
     "graduated": "Jan-2022",
     "expectedGraduation": "",
     "thesis": "Investigation of aerosol hygroscopicity, its causative factors and impact at an urban site",
+    "coSupervisor": "",
     "affiliation": "Project Scientist, Indian Institute of Technology Delhi"
   },
   {
@@ -120,6 +132,7 @@ window.LAB.students = [
     "graduated": "Feb-2022",
     "expectedGraduation": "",
     "thesis": "In field emission of aerosol and gases from traditional cook stove and its climate implication",
+    "coSupervisor": "",
     "affiliation": "Research Associate, Indian Institute of Tropical Meteorology"
   },
   {
@@ -130,6 +143,7 @@ window.LAB.students = [
     "graduated": "Oct-2022",
     "expectedGraduation": "",
     "thesis": "Source Apportionment of Aerosols in Ghaziabad using Advanced Receptor Modelling Tools",
+    "coSupervisor": "",
     "affiliation": "Associate Professor, Delhi Technological University"
   },
   {
@@ -140,6 +154,7 @@ window.LAB.students = [
     "graduated": "Jul-2023",
     "expectedGraduation": "",
     "thesis": "Investigation of climate relevant properties of aerosol and contribution of sources in arid region, Bikaner, India",
+    "coSupervisor": "",
     "affiliation": "Post-Doctoral Researcher, NASA Langley Research Center"
   },
   {
@@ -150,6 +165,7 @@ window.LAB.students = [
     "graduated": "Sep-2025",
     "expectedGraduation": "",
     "thesis": "Aerosol emission inventory for residential sector of India based on fuel-use survey and on-field emission measurement",
+    "coSupervisor": "",
     "affiliation": "Technical Advisor, Pure Earth India Pvt. Ltd."
   },
   {
@@ -160,6 +176,7 @@ window.LAB.students = [
     "graduated": "Apr-2026",
     "expectedGraduation": "",
     "thesis": "Short-term exposure to traffic-related air pollution and its effect on cardiovascular health",
+    "coSupervisor": "",
     "affiliation": "Early-Doc Fellow, Indian Institute of Technology Delhi"
   },
   {
@@ -170,6 +187,7 @@ window.LAB.students = [
     "graduated": "Jun-2026",
     "expectedGraduation": "",
     "thesis": "Role of land-use land-cover change on meteorology and its effect on short lived climated pollutants",
+    "coSupervisor": "",
     "affiliation": "Independent Consultant"
   },
 ];

@@ -12,7 +12,7 @@ Yes. Each tab links to its own HTML page. All pages share the same stylesheet an
 | --- | --- | --- |
 | Home | `index.html` | `data/site.js` |
 | Research | `research.html` | `data/research.js` |
-| Research group | `group.html` | `data/students.js` |
+| Research group | `group.html` | `data/students.js` and `data/staff.js` |
 | Facilities | `facilities.html` | `data/facilities.js` |
 | Projects | `projects.html` | `data/projects.js` |
 | Publications | `publications.html` | `data/publications.js` |

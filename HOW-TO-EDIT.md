@@ -51,7 +51,7 @@ For a **current student**, fill `joined`. For an **alumnus/alumna**, fill `gradu
 
 In practice, set only the relevant field to the person's verified date. Current students display `Joined: Jul-2024`; alumni display `Graduated: May-2023`. Blank dates display `To be added`. `January 2024` and `2024-01` also normalize to `Jan-2024`. Use `Sep`, not `Sept`, in your edited data.
 
-Keep `status` as `current` or `alumni`, since this controls which section contains the student. The old `expectedGraduation` field is retained for compatibility but is not displayed. Fill `thesis` and `affiliation` independently when you have the details.
+Keep `status` as `current` or `alumni`, since this controls which section contains the student. The old `expectedGraduation` field is retained for compatibility but is not displayed. Fill `thesis` and `coSupervisor` for either status. `affiliation` is displayed only for PhD alumni. Blank co-supervisor values display “To be added”; use “None” if there is no co-supervisor.
 
 You can add portraits for only the people whose photos are available. Leave everyone else's `photo` empty; their cards retain name placeholders.
 
@@ -59,7 +59,7 @@ You can add portraits for only the people whose photos are available. Leave ever
 
 The introductory `<div class="page-heading">...</div>` was removed from `group.html`. This removed the repeated “People”, “Research group”, and description text above the student sections. The navigation tab and browser title still identify the page.
 
-The page now starts with “Current PhD researchers”. `group()` in `assets/js/app.js` generates that heading and the “PhD alumni” heading. `studentCard()` generates each card; `monthYear()` formats the dates. Group-page top spacing is in `assets/css/styles.css` under `body[data-page=group] #main`.
+The page now starts with “Current PhD researchers”. `group()` in `assets/js/app.js` assembles the four sections: Current PhD researchers, Current research staff, PhD alumni, and Past research staff. `studentCard()` generates each card; `monthYear()` formats the dates. Group-page top spacing is in `assets/css/styles.css` under `body[data-page=group] #main`.
 
 ## Instrument and research photographs
 
@@ -78,3 +78,50 @@ node scripts/build-static.cjs
 ```
 
 Commit the updated HTML files alongside the data changes. This also updates the shared header/footer copies. No dependencies need installing. Do not edit generated content between `CONTENT START` and `CONTENT END` directly, because rebuilding replaces it.
+
+## Co-supervisors for PhD students
+
+In `data/students.js`, every current student and alumnus/alumna now has:
+
+```javascript
+"coSupervisor": "",
+```
+
+Fill the existing field, for example `"coSupervisor": "Prof. Full Name, Institution",`.
+For multiple co-supervisors, separate names with semicolons inside the same quotes.
+This appears below the thesis on both current and alumni cards. Leave it blank for
+“To be added”, or enter `"None"` if there is no co-supervisor.
+
+## JRF, SRF, postdoctoral researchers and project staff
+
+Open `data/staff.js`. There are two blank templates: one with `"status": "current"`
+and one with `"status": "past"`. Fill these first, then copy an entire `{ ... }`
+block for each additional person. Separate adjacent blocks with a comma.
+Blank-name templates are not displayed or counted as members.
+
+| Field | What to enter | Where it appears |
+| --- | --- | --- |
+| `name` | Full name | Both sections; required to show the entry |
+| `status` | `current` or `past` | Selects the section |
+| `designation` | JRF, SRF, Postdoctoral Researcher, Project Scientist, etc. | Both sections |
+| `photo` | Exact path, e.g. `assets/images/member-name.jpg` | Current member's photo card |
+| `joined` | Start month and year, e.g. `Jul-2025` | Both sections |
+| `left` | End month and year, e.g. `Jun-2026` | Past staff's period of association |
+| `research` | Research topic or project | Current member's card |
+| `currentRole` | Present role and institution | Past staff's table |
+
+Upload photos to `assets/images/`, then fill the matching `photo` field. Leave
+`photo` empty if unavailable; the current card will show an initials placeholder.
+Current research staff appear between current PhD researchers and PhD alumni.
+Past research staff appear in a table after PhD alumni. Empty sections show
+“Member details will be added soon.” No fictional member profiles are published.
+
+To move a person to past staff, change `status` to `past`, fill `left` and
+`currentRole`, and keep their name, designation and joined date. Their existing
+photo and research text can remain saved but are not displayed in the past table.
+For a JRF promoted to SRF, one entry can use `"designation": "JRF → SRF"`.
+PhD students with JRF/SRF fellowships normally remain in `data/students.js` only.
+
+Commit the edited data file to `main`, wait for the Pages deployment, and refresh.
+To keep the no-JavaScript HTML copy current, also run `node scripts/build-static.cjs`
+and commit the regenerated `group.html` when working locally.
