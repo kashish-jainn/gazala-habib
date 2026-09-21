@@ -24,7 +24,8 @@ for (const page of pages) {
   };
   vm.createContext(context);
   for (const [,src] of html.matchAll(/<script defer src="([^"]+)"/g)) {
-    vm.runInContext(fs.readFileSync(path.join(base,src),'utf8'),context,{filename:src});
+    const sourcePath = src.split('?')[0];
+    vm.runInContext(fs.readFileSync(path.join(base,sourcePath),'utf8'),context,{filename:sourcePath});
   }
   assert(target.innerHTML.length > 300, `${page}: content was not generated`);
   assert(!target.innerHTML.includes('This page could not load'), `${page}: rendering failed`);
