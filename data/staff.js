@@ -17,7 +17,7 @@ window.LAB.staff = [
     "photo": "",
     "joined": "Jun-2017",
     "left": "",
-    "research": "",
+    "research": "Ambient measurements and lab characterisation",
     "currentRole": ""
   },
   {
@@ -27,7 +27,7 @@ window.LAB.staff = [
     "photo": "",
     "joined": "Jun-2017",
     "left": "",
-    "research": "",
+    "research": "On-field ambient and source measurements",
     "currentRole": ""
   },
   {
@@ -37,7 +37,7 @@ window.LAB.staff = [
     "photo": "",
     "joined": "Jan-2021",
     "left": "",
-    "research": "",
+    "research": "On-field ambient and source measurements and lab characterisation",
     "currentRole": ""
   },
   {
