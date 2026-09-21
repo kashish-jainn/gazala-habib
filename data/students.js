@@ -11,7 +11,7 @@ window.LAB.students = [
     "graduated": "",
     "expectedGraduation": "",
     "thesis": "Role of aerosol chemical composition in hygroscopic behaviour and optical properties during winter in Delhi",
-    "coSupervisor": "",
+    "coSupervisor": "Prof. Alfred Weidensohler (Leibniz Institute for Tropospheric Research)",
     "affiliation": ""
   },
   {
@@ -37,7 +37,7 @@ window.LAB.students = [
     "affiliation": ""
   },
   {
-    "name": "Karegowda",
+    "name": "Karigowda",
     "status": "current",
     "photo": "",
     "joined": "July-2023",
@@ -66,7 +66,7 @@ window.LAB.students = [
     "graduated": "",
     "expectedGraduation": "",
     "thesis": "",
-    "coSupervisor": "",
+    "coSupervisor": "Prof. Grisa Mocnik (University of Nova Gorica)",
     "affiliation": ""
   },
   {
@@ -77,7 +77,7 @@ window.LAB.students = [
     "graduated": "",
     "expectedGraduation": "",
     "thesis": "",
-    "coSupervisor": "",
+    "coSupervisor": "Prof. Sagnik Dey (CAS, IIT-D)",
     "affiliation": ""
   },
   {
@@ -99,7 +99,7 @@ window.LAB.students = [
     "graduated": "Oct-2018",
     "expectedGraduation": "",
     "thesis": "Role of aerosols on cardiopulmonary functions of economically different groups of megacity Delhi and a town Hamirpur Himachal Pradesh",
-    "coSupervisor": "",
+    "coSupervisor": "Prof. Mukesh Khare (Civil Engg., IIT-D)",
     "affiliation": "Assistant Engineer, Directorate of Local Bodies, Govt. of Rajasthan"
   },
   {
@@ -110,7 +110,7 @@ window.LAB.students = [
     "graduated": "Sep-2020",
     "expectedGraduation": "",
     "thesis": "Effects of fine aerosol and its toxic components on human lung- An integrative approach",
-    "coSupervisor": "",
+    "coSupervisor": "Prof. Arun Kumar (Civil Engg., IIT-D) & Prof. Vivekanandan Perumal (KSBS, IIT-D)",
     "affiliation": "Assistant Vice President, Barclays"
   },
   {
@@ -176,7 +176,7 @@ window.LAB.students = [
     "graduated": "Apr-2026",
     "expectedGraduation": "",
     "thesis": "Short-term exposure to traffic-related air pollution and its effect on cardiovascular health",
-    "coSupervisor": "",
+    "coSupervisor": "Dr. Sandeep Singh (AIIMS Delhi) & Dr. Arun K Sharma (UCMS, Delhi University)",
     "affiliation": "Early-Doc Fellow, Indian Institute of Technology Delhi"
   },
   {
@@ -187,7 +187,7 @@ window.LAB.students = [
     "graduated": "Jun-2026",
     "expectedGraduation": "",
     "thesis": "Role of land-use land-cover change on meteorology and its effect on short lived climated pollutants",
-    "coSupervisor": "",
+    "coSupervisor": "Prof. Harsha Kota (Civil Engg., IIT-D)",
     "affiliation": "Independent Consultant"
   },
 ];
