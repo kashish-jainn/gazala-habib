@@ -2,7 +2,7 @@
 
 A complete, editable static website for GitHub Pages. It uses HTML, CSS and JavaScript, with no package installation, database, server or build command. Open `index.html` in a browser to preview it locally. All eight HTML pages include their content, so they remain readable without JavaScript. JavaScript loads subsequent data edits and enables the photo controls.
 
-The package includes eight pages, six research themes, 16 students, nine projects and 84 publication records. Photographs and institutional logos that have not been supplied have empty image fields; the site displays labelled placeholders or the institution's text abbreviation. No missing image is represented as an authentic instrument, student or institution logo.
+The package includes eight pages, six research themes, 17 students, nine projects and 84 publication records. Photographs and institutional logos that have not been supplied have empty image fields; the site displays labelled placeholders or the institution's text abbreviation. No missing image is represented as an authentic instrument, student or institution logo.
 
 ## 1. Is there separate code for each website tab?
 

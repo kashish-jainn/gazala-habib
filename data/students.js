@@ -28,8 +28,8 @@ window.LAB.students = [
     "photo": "",
     "joined": "Jan-2023",
     "graduated": "",
-    "expectedGraduation": "Investigating the contribution of organics in refining source apportionment",
-    "thesis": "",
+    "expectedGraduation": "",
+    "thesis": "Investigating the contribution of organics in refining source apportionment",
     "affiliation": ""
   },
   {
@@ -95,7 +95,7 @@ window.LAB.students = [
   {
     "name": "Ananya Das",
     "status": "alumni",
-    "photo": "",
+    "photo": "assets/images/ananya_das.jpg",
     "joined": "",
     "graduated": "Sep-2020",
     "expectedGraduation": "",
@@ -145,7 +145,7 @@ window.LAB.students = [
   {
     "name": "Jyoti Kumari",
     "status": "alumni",
-    "photo": "",
+    "photo": "assets/images/jyoti_kumari.jpeg",
     "joined": "",
     "graduated": "Sep-2025",
     "expectedGraduation": "",
@@ -155,17 +155,17 @@ window.LAB.students = [
   {
     "name": "Kashish Jain",
     "status": "alumni",
-    "photo": "",
+    "photo": "assets/images/kashish_jain.jpg",
     "joined": "",
     "graduated": "Apr-2026",
     "expectedGraduation": "",
     "thesis": "Short-term exposure to traffic-related air pollution and its effect on cardiovascular health",
     "affiliation": "Early-Doc Fellow, Indian Institute of Technology Delhi"
-  }
+  },
   {
     "name": "Diljit Kumar Nayak",
     "status": "alumni",
-    "photo": "",
+    "photo": "assets/images/diljit_nayak.jpg",
     "joined": "",
     "graduated": "Jun-2026",
     "expectedGraduation": "",
