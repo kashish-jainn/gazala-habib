@@ -94,7 +94,7 @@ window.LAB.students = [
   {
     "name": "Gaurav Singh",
     "status": "alumni",
-    "photo": "",
+    "photo": "assets/images/gaurav_singh.jpg",
     "joined": "",
     "graduated": "Oct-2018",
     "expectedGraduation": "",
