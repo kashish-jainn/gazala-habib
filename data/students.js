@@ -189,5 +189,5 @@ window.LAB.students = [
     "thesis": "Role of land-use land-cover change on meteorology and its effect on short lived climated pollutants",
     "coSupervisor": "Prof. Harsha Kota (Civil Engg., IIT-D)",
     "affiliation": "Independent Consultant"
-  },
+  }
 ];
