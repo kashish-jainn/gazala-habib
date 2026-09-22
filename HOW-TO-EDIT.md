@@ -65,7 +65,7 @@ The page now starts with “Current PhD researchers”. `group()` in `assets/js/
 
 Instrument photos: upload to `assets/images/`, then set the matching instrument's `image` in `data/facilities.js`. Example: `"image": "assets/images/marga-r.jpg"`. Set `alt` to a short description of the actual photograph.
 
-Research theme photos: set the relevant `image` and `imageAlt` in `data/research.js`.
+Research theme photos: edit the `photos` list in `data/research.js`; see the detailed instructions below.
 
 ## Private previews and fallback content
 
@@ -125,3 +125,64 @@ PhD students with JRF/SRF fellowships normally remain in `data/students.js` only
 Commit the edited data file to `main`, wait for the Pages deployment, and refresh.
 To keep the no-JavaScript HTML copy current, also run `node scripts/build-static.cjs`
 and commit the regenerated `group.html` when working locally.
+
+## Research themes: multiple photos and reference publications
+
+Edit `data/research.js`. Each theme contains its own `photos` and `papers` lists.
+You can add as many entries as needed by copying a complete object and keeping
+commas between adjacent objects. Changes here do not alter the Publications tab.
+
+### Add photos to a theme
+
+1. Upload your files to `assets/images/` (the same folder used for other photos).
+2. Find the theme by its `title` in `data/research.js`.
+3. Fill its blank photo entries, for example:
+
+```javascript
+"photos": [
+  {
+    "image": "assets/images/emissions-fieldwork-1.jpg",
+    "alt": "Describe what the first photograph shows",
+    "caption": "Optional caption for the first photograph"
+  },
+  {
+    "image": "assets/images/emissions-fieldwork-2.jpg",
+    "alt": "Describe what the second photograph shows",
+    "caption": "Optional caption for the second photograph"
+  }
+],
+```
+
+These filenames are examples; use the exact uploaded filename and extension.
+Leave `image` empty until you have a photograph. Blank photo entries are skipped.
+With one photo, the theme displays that image. With two or more, it rotates
+through them and shows `<` / `>` buttons, a slide counter, and Pause/Play.
+Manual navigation pauses automatic rotation; Play resumes it. Left/right keyboard
+arrows work when a slideshow control has focus. Reduced-motion preferences turn
+off automatic rotation and animation. Each theme's slideshow works independently.
+Captions are optional; write useful `alt` text for each photograph. The theme's
+explanation remains below its photographs.
+
+### Add or change reference publications
+
+Each theme starts with two selected papers. To add another, copy an object in
+that theme's `papers` list and fill these fields:
+
+```javascript
+{
+  "title": "Full publication title",
+  "year": "2025",
+  "journal": "Journal name",
+  "url": "https://doi.org/REPLACE-WITH-THE-ACTUAL-DOI"
+}
+```
+
+Use the actual DOI link or publisher URL. Do not upload a paper to add a link.
+Keep a comma between the previous paper object and the new one. The website
+shows all entries with a title, in the order you list them, under “Reference
+publications”. Titles link to the supplied URL; journal and year appear below.
+
+Commit the file to `main`, allow GitHub Pages to deploy, then refresh the page.
+For local editing, run `node scripts/build-static.cjs` and commit the updated HTML
+copies too. Asset version suffixes such as `?v=research-3` only refresh browser
+caches; they are not part of filenames and should not be added to uploaded files.

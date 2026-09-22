@@ -118,7 +118,7 @@ The previous third-party professor portrait is no longer displayed, and its home
 
 ### Research
 
-Each research theme in `data/research.js` has one `image`. It appears above the theme description and representative publication.
+Each research theme in `data/research.js` has a `photos` list and a `papers` list. Add any number of entries. Two or more photos enable automatic rotation, `<` / `>` controls, and Pause/Play above the theme description. Two verified reference papers are included per theme; add more with their title, year, journal and URL. See HOW-TO-EDIT.md for examples.
 
 ### Students
 

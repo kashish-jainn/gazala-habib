@@ -16,12 +16,12 @@ For step-by-step GitHub upload instructions, see **HOW-TO-EDIT.md**.
 
 ## Research themes
 
-- `data/research.js` → `image`: Emission inventories & primary data
-- `data/research.js` → `image`: Field experiments & source characterization
-- `data/research.js` → `image`: Atmospheric aerosol chemistry
-- `data/research.js` → `image`: Source apportionment & air quality management
-- `data/research.js` → `image`: Exposure, epidemiology & health
-- `data/research.js` → `image`: Aerosol optics & climate interactions
+- `data/research.js` → `photos` → each entry’s `image`: Emission inventories & primary data
+- `data/research.js` → `photos` → each entry’s `image`: Field experiments & source characterization
+- `data/research.js` → `photos` → each entry’s `image`: Atmospheric aerosol chemistry
+- `data/research.js` → `photos` → each entry’s `image`: Source apportionment & air quality management
+- `data/research.js` → `photos` → each entry’s `image`: Exposure, epidemiology & health
+- `data/research.js` → `photos` → each entry’s `image`: Aerosol optics & climate interactions
 
 ## Student portraits
 

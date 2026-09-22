@@ -54,7 +54,7 @@ window.LAB.site = {
     }
   ],
   "slideshowInterval": 6500,
-  "researchNote": "Themes are synthesized from the group’s supplied research description and Professor Habib’s publication record. Each area links to a representative publication.",
+  "researchNote": "Themes are synthesized from the group’s supplied research description and Professor Habib’s publication record. Each area links to selected reference publications.",
   "projectNote": "Project details are transcribed from the supplied CV. The Muzaffarpur project was listed as ongoing, with an April 2026 end date; its current status needs confirmation.",
   "publicationSnapshot": "19 September 2026",
   "labShortName": "ARCID",

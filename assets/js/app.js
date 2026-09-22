@@ -67,7 +67,22 @@
       <aside class="profile-aside">${photo(profile.portrait,`Professor ${profile.name}`,'Professor’s portrait','portrait','50% 20%',true)}<p class="profile-role">${escape(profile.title)}<br>${escape(profile.department)}<br>${escape(profile.shortInstitution)}</p></aside>
       <div class="profile-text"><p class="eyebrow">Laboratory lead</p><h2>Professor ${escape(profile.name)}</h2><p class="lead">${escape(profile.introduction)}</p>${paragraphs(profile.biography)}<div class="link-row">${link(`mailto:${profile.email}`,'Email Professor Habib','button')}${(profile.links||[]).map(l=>link(l.url,l.label)).join('')}</div></div>
     </section>${profile.portraitCredit ? `<p class="credit">Portrait: ${link(profile.portraitCreditUrl,profile.portraitCredit)}.</p>` : ''}`;
-  const research = () => `<div class="research-grid">${(data.research||[]).map((r,i)=>`<article class="research-card">${photo(r.image,r.imageAlt||r.title,`Research photograph · ${r.title}`)}<div class="research-body"><p class="eyebrow">Research theme ${String(i+1).padStart(2,'0')}</p><h2>${escape(r.title)}</h2><p>${escape(r.description)}</p><ul class="tags">${(r.methods||[]).map(m=>`<li>${escape(m)}</li>`).join('')}</ul><div class="related-paper"><span class="small-label">Representative publication</span>${link(`https://doi.org/${r.doi}`,r.paper)}</div></div></article>`).join('')}</div><p class="editorial-note">${escape(profile.researchNote)}</p>`;
+  const researchGallery = (r) => {
+    const photos = (r.photos || [{image:r.image,alt:r.imageAlt}]).filter(p=>safeUrl(p.image));
+    if (!photos.length) return photo('',r.title,`Research photograph · ${r.title}`);
+    const id = `gallery-${galleryId++}`;
+    const multiple = photos.length > 1;
+    return `<section class="gallery research-gallery" data-gallery data-autoplay="${multiple}" aria-label="${escape(r.title)} photographs" aria-roledescription="carousel">
+      <div class="gallery-stage" id="${id}">${photos.map((p,i)=>`<figure class="slide" data-slide role="group" aria-roledescription="slide" aria-label="${i+1} of ${photos.length}"${i?' hidden':''}>${photo(p.image,p.alt||r.title,`Research photograph · ${r.title}`,'',p.position||'50% 50%')}${p.caption?`<figcaption>${escape(p.caption)}</figcaption>`:''}</figure>`).join('')}</div>
+      ${multiple?`<div class="gallery-controls"><div class="gallery-buttons"><button type="button" data-prev aria-label="Previous photograph" aria-controls="${id}"><span aria-hidden="true">&lt;</span></button><button type="button" data-next aria-label="Next photograph" aria-controls="${id}"><span aria-hidden="true">&gt;</span></button></div><span class="gallery-count" data-count aria-live="off">1 / ${photos.length}</span><button type="button" data-play aria-label="Pause slideshow">Pause</button></div>`:''}
+    </section>`;
+  };
+  const researchPapers = (r) => {
+    const papers = (r.papers || (r.paper ? [{title:r.paper,url:`https://doi.org/${r.doi}`}] : [])).filter(p=>p.title);
+    if (!papers.length) return '';
+    return `<div class="related-paper"><h3 class="small-label">Reference publications</h3><ol class="reference-papers">${papers.map(p=>`<li>${link(p.url || (p.doi?`https://doi.org/${p.doi}`:''),p.title)}${p.journal||p.year?`<p class="reference-meta">${escape([p.journal,p.year].filter(Boolean).join(' · '))}</p>`:''}</li>`).join('')}</ol></div>`;
+  };
+  const research = () => `<div class="research-grid">${(data.research||[]).map((r,i)=>`<article class="research-card">${researchGallery(r)}<div class="research-body"><p class="eyebrow">Research theme ${String(i+1).padStart(2,'0')}</p><h2>${escape(r.title)}</h2><p>${escape(r.description)}</p><ul class="tags">${(r.methods||[]).map(m=>`<li>${escape(m)}</li>`).join('')}</ul>${researchPapers(r)}</div></article>`).join('')}</div><p class="editorial-note">${escape(profile.researchNote)}</p>`;
   const studentCard = (s) => {
     const date = s.status==='alumni' ? `Graduated: ${monthYear(s.graduated)}` : `Joined: ${monthYear(s.joined)}`;
     const affiliation = s.status==='alumni' ? `<div><dt>Current affiliation</dt><dd>${escape(s.affiliation||'Affiliation to be added')}</dd></div>` : '';

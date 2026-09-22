@@ -28,3 +28,17 @@
 .lab-brand{min-width:0;flex:1}.brand-copy{min-width:0}.lab-brand strong{font-size:34px;letter-spacing:.08em}.lab-brand small{display:block;max-width:390px;text-transform:none;letter-spacing:.02em;font-size:14px;line-height:1.45;margin-top:5px}.header-logo{flex:none;display:flex;align-items:center;justify-content:center;width:88px;height:88px;padding:7px;border:1px solid var(--line);border-radius:5px;color:var(--teal);background:#fff;font:17px var(--serif);text-align:center}.header-logo img{width:100%;height:100%;object-fit:contain}.institution-brand{display:flex;align-items:center;justify-content:flex-end;gap:22px;flex:none}.institution-brand .institution{font-size:11px}.lab-overview{padding-top:45px;max-width:930px}.lab-overview h1{letter-spacing:.04em;margin-bottom:8px}.lab-overview .lead{font-family:var(--serif);font-size:clamp(23px,3vw,32px);line-height:1.35;color:var(--ink)}.lab-overview>p:last-child{margin-top:19px;color:var(--muted)}.profile-text h2{font-size:clamp(30px,4vw,45px);margin-bottom:17px}.profile-section{padding-top:45px}body[data-page=group] #main{padding-top:44px}.people-section .section-line h1{font-size:clamp(1.75rem,2.7vw,2.25rem)}
 @media(max-width:1050px){.institution-brand .institution{display:none}.institution-brand{gap:0}}
 @media(max-width:500px){.masthead{gap:12px;align-items:flex-start}.lab-brand{gap:10px}.header-logo{width:58px;height:64px;font-size:12px;padding:4px}.lab-brand strong{font-size:24px}.lab-brand small{font-size:11px;max-width:180px}.lab-overview{padding-top:30px}body[data-page=group] #main{padding-top:30px}.footer-inner strong{font-size:18px}}
+
+/* Multiple photos and reference papers for research themes. */
+.research-gallery{border:0;border-radius:0}
+.research-gallery .slide figcaption{padding:12px 20px;font-size:14px;color:var(--muted)}
+.research-gallery .slide:not([hidden]){animation:research-photo-in .45s ease-out}
+.research-gallery .gallery-controls{padding:10px 20px}
+.research-gallery .gallery-buttons button{font-size:21px}
+.related-paper h3.small-label{font-family:var(--sans);font-weight:700;font-size:11px;line-height:1.5;letter-spacing:.1em;margin-bottom:14px}
+.reference-papers{margin:0;padding-left:21px;font-size:14px;line-height:1.6}
+.reference-papers li{padding-left:5px;overflow-wrap:anywhere}
+.reference-papers li+li{margin-top:17px;padding-top:17px;border-top:1px solid var(--line)}
+.reference-papers li::marker{color:var(--teal);font-weight:600}
+.reference-meta{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.5}
+@keyframes research-photo-in{from{opacity:.4;transform:translateX(8px)}to{opacity:1;transform:translateX(0)}}
