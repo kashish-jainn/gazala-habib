@@ -148,12 +148,12 @@ window.LAB.research = [
     "title": "Exposure, epidemiology & health",
     "photos": [
       {
-        "image": "",
+        "image": "assets/images/5_1.png",
         "alt": "Exposure, epidemiology & health",
         "caption": ""
       },
       {
-        "image": "",
+        "image": "assets/images/5_2.jpg",
         "alt": "Exposure, epidemiology & health",
         "caption": ""
       }
@@ -183,12 +183,17 @@ window.LAB.research = [
     "title": "Aerosol optics & climate interactions",
     "photos": [
       {
-        "image": "",
+        "image": "assets/images/6_1.png",
         "alt": "Aerosol optics & climate interactions",
         "caption": ""
       },
       {
-        "image": "",
+        "image": "assets/images/6_2.png",
+        "alt": "Aerosol optics & climate interactions",
+        "caption": ""
+      },
+      {
+        "image": "assets/images/6_3.png",
         "alt": "Aerosol optics & climate interactions",
         "caption": ""
       }
